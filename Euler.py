@@ -28,6 +28,32 @@ def is_prime(n):
     # After exhausting possible factors up to sqrt(n), it must be prime.
     return True
 
+def prime_sieve(limit):
+    '''Returns the set of primes up to the limit.
+    This method uses the sieve of Eratosthenes.
+    See http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes.'''
+
+    # Start our sieve with 2
+    primes = set([2])
+
+    # Build our list to check off candidates 
+    # (0 == prime, 1 == composite)
+    nums = [0]*limit
+
+    prime = 3
+    while prime < limit:
+        # If we hit a prime, add it to our set and mark off its multiples.
+        if nums[prime] == 0:
+            primes.add(prime)
+            i = prime
+            while i < limit:
+                nums[i] = 1
+                i += prime
+        # Else iterate further.
+        else:
+            prime += 2
+    return primes
+
 def prime_generator():
     '''Returns the primes in succession.'''
 
