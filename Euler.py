@@ -80,3 +80,28 @@ def triangle_number(n):
     '''Returns the nth triangle number.
     Also the sum of the first n natural numbers.'''
     return n * (n+1) / 2
+
+def digit_sum(n):
+    '''Returns the digit sum of n.
+    This method works on both integers and strings,
+    as we convert integers to strings.'''
+    
+    if type(n) == int: n = str(n)
+    return sum(int(x) for x in n)
+
+def digit_product(n):
+    '''Returns the digit product of n.
+    This method works on both integers and strings,
+    as we convert integers to iterable strings.'''
+
+    if type(n) == int: n = str(n)
+    return product(n)
+    
+def product(iterable):
+    '''Returns the product of all the elements in iterable.
+    Guido apparently vetoed the inclusion of a product method
+    like the sum method. How irritating, though easy to fix.'''
+    p = 1
+    for e in iterable: p *= int(e)
+    return p
+
