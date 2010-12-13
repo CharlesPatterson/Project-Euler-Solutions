@@ -53,4 +53,14 @@ def lcm(a, b):
     '''Returns the Least Common Divisor of a and b.
     The expression returned is a convenient theorem I learned
     from Gallian's Contemporary Abstract Algebra textbook.'''
-    return a*b/gcd(a, b)
+    return a * b / gcd(a, b)
+
+def sum_of_squares(n):
+    '''Returns the sum of the squares from 1 to n.
+    Done in O(1) time with the explicit formula below.'''
+    return (n * (n+1) * (2*n+1)) / 6
+
+def triangle_number(n):
+    '''Returns the nth triangle number.
+    Also the sum of the first n natural numbers.'''
+    return n * (n+1) / 2
