@@ -28,6 +28,22 @@ def is_prime(n):
     # After exhausting possible factors up to sqrt(n), it must be prime.
     return True
 
+def prime_generator():
+    '''Returns the primes in succession.'''
+
+    # Take care of the first few primes.
+    yield 2
+    yield 3
+    yield 5
+    yield 7
+
+    # We iterate just like the is_prime method.
+    i = 11
+    while True:
+      if is_prime(i): yield i
+      if is_prime(i+2): yield i+2
+      i += 6
+
 def is_palindrome(n):
     '''Returns True if n is a palindrome, False if n is not.
     This method uses string indexing to compare elements.
