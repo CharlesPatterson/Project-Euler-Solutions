@@ -42,3 +42,15 @@ def is_palindrome(n):
       if n[i] != n[len(n)-1-i]:
         return False
     return True
+
+def gcd(a, b):
+    '''Returns the Greatest Common Divisor of a and b.
+    This method uses an iterative version of Euclid's algorithm.'''
+    while b != 0: a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    '''Returns the Least Common Divisor of a and b.
+    The expression returned is a convenient theorem I learned
+    from Gallian's Contemporary Abstract Algebra textbook.'''
+    return a*b/gcd(a, b)
