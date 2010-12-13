@@ -27,3 +27,18 @@ def is_prime(n):
 
     # After exhausting possible factors up to sqrt(n), it must be prime.
     return True
+
+def is_palindrome(n):
+    '''Returns True if n is a palindrome, False if n is not.
+    This method uses string indexing to compare elements.
+    Both strings and integers are acceptable inputs,
+    as integers are just converted to strings for processing.'''
+
+    # Convert ints to strs
+    if type(n) == int: n = str(n)
+
+    # Checking half the word is equivalent to checking the whole word.
+    for i in range(len(n)/2):
+      if n[i] != n[len(n)-1-i]:
+        return False
+    return True
