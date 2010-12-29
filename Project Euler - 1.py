@@ -22,4 +22,4 @@ def project_euler_1_bruteforce():
 if __name__ == "__main__":
     project_euler_1_bruteforce()
     
-    input("Press Enter to continue...")
+    raw_input("Press Enter to continue...")

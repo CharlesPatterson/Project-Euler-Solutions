@@ -29,4 +29,4 @@ def project_euler_2_iterative():
 if __name__ == "__main__":
     project_euler_2_iterative()
 
-    input("Press Enter to Continue...")		
+    raw_input("Press Enter to Continue...")		

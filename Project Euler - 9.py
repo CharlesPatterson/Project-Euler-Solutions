@@ -29,4 +29,4 @@ def project_euler_9():
 if __name__ == "__main__":
     project_euler_9()
 
-    input("Press Enter to Continue...")
+    raw_input("Press Enter to Continue...")

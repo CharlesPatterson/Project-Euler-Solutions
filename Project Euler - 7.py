@@ -27,5 +27,4 @@ def project_euler_7():
 if __name__ == "__main__":
     project_euler_7()
     
-    input("Press Enter to continue...")
-
+    raw_input("Press Enter to continue...")

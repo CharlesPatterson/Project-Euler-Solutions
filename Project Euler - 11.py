@@ -82,4 +82,4 @@ def matrix_prod(m, x, y, stepH, stepV, n):
 if __name__ == "__main__":
     project_euler_11()
  
-    input("Press Enter to Continue.")
+    raw_input("Press Enter to Continue.")

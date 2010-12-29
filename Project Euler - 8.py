@@ -51,5 +51,4 @@ def project_euler_8():
 if __name__ == "__main__":
     project_euler_8()
 
-    input("Press Enter to Continue...")
-        
+    raw_input("Press Enter to Continue...")
