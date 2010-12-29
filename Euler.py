@@ -144,3 +144,6 @@ def product(iterable):
     for e in iterable: p *= int(e)
     return p
 
+def cross(A, B):
+    '''Returns the cross product of A with B.'''
+    return [a+b for a in A for b in B]
