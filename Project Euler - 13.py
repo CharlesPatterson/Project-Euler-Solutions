@@ -1,9 +1,25 @@
+#!/usr/bin/env python
+"""Solution to Problem 13 of Project Euler.
+
+See http://projecteuler.net/index.php?section=problems&id=13 for the details.
+"""
+
+__author__ = "Charles Patterson"
+__copyright__ = "Copyright 2010"
+__credits__ = []
+
+__license__ = "GPL"
+__version__ = "1.0.0"
+__maintainer__ = "Charles Patterson"
+__email__ = "charles@cmpatterson.com"
+__status__ = "Production"
+
 def project_euler_13():
     '''Prints the first 10 digits of the sum of 100 
     50-digit numbers. Note: I didn't type this up. 
     I copy-pasted the numbers into VIM,
     then used search and replace to indent and add commas: 
-    :7,105s/^/    / and :7,105s/$/,/ Cool, eh?'''
+    :23,121s/^/    / and :23,121s/$/,/ Cool, eh?'''
     nums = [37107287533902102798797998220837590246510135740250,
     46376937677490009712648124896970078050417018260538,
     74324986199524741059474233309513058123726617309629,

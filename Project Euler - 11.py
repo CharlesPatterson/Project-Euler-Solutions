@@ -1,3 +1,19 @@
+#!/usr/bin/env python
+"""Solution to Problem 11 of Project Euler.
+
+See http://projecteuler.net/index.php?section=problems&id=11 for the details.
+"""
+
+__author__ = "Charles Patterson"
+__copyright__ = "Copyright 2010"
+__credits__ = []
+
+__license__ = "GPL"
+__version__ = "1.0.0"
+__maintainer__ = "Charles Patterson"
+__email__ = "charles@cmpatterson.com"
+__status__ = "Production"
+
 def project_euler_11():
     '''Finds the largest four-number product in the grid below.
     The solution uses brute-force, checking each product.'''

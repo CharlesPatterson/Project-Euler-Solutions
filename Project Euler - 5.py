@@ -1,4 +1,19 @@
+#!/usr/bin/env python
+"""Solution to Problem 5 of Project Euler.
+
+See http://projecteuler.net/index.php?section=problems&id=5 for the details.
+"""
 from Euler import lcm
+
+__author__ = "Charles Patterson"
+__copyright__ = "Copyright 2010"
+__credits__ = []
+
+__license__ = "GPL"
+__version__ = "1.0.0"
+__maintainer__ = "Charles Patterson"
+__email__ = "charles@cmpatterson.com"
+__status__ = "Production"
 
 def project_euler_5():
     '''Prints the smallest number divisible by the numbers 1 to 20.

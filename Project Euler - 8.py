@@ -1,4 +1,19 @@
+#!/usr/bin/env python
+"""Solution to Problem 8 of Project Euler.
+
+See http://projecteuler.net/index.php?section=problems&id=8 for the details.
+"""
 from Euler import digit_product
+
+__author__ = "Charles Patterson"
+__copyright__ = "Copyright 2010"
+__credits__ = []
+
+__license__ = "GPL"
+__version__ = "1.0.0"
+__maintainer__ = "Charles Patterson"
+__email__ = "charles@cmpatterson.com"
+__status__ = "Production"
 
 def project_euler_8():
     '''Prints the greatest product of five consecutive digits in the given number.

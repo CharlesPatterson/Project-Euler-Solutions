@@ -1,3 +1,19 @@
+#!/usr/bin/env python
+"""Solution to Problem 9 of Project Euler.
+
+See http://projecteuler.net/index.php?section=problems&id=9 for the details.
+"""
+
+__author__ = "Charles Patterson"
+__copyright__ = "Copyright 2010"
+__credits__ = []
+
+__license__ = "GPL"
+__version__ = "1.0.0"
+__maintainer__ = "Charles Patterson"
+__email__ = "charles@cmpatterson.com"
+__status__ = "Production"
+
 def project_euler_9():
     '''Prints the product of the unique pythagorean triplet 
     for which a+b+c=1000. This is a naive brute-force solution 

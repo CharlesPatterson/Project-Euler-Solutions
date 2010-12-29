@@ -1,3 +1,16 @@
+#!/usr/bin/env python
+"""Miscellaneous helper functions for Project Euler problems."""
+
+__author__ = "Charles Patterson"
+__copyright__ = "Copyright 2010"
+__credits__ = []
+
+__license__ = "GPL"
+__version__ = "1.0.0"
+__maintainer__ = "Charles Patterson"
+__email__ = "charles@cmpatterson.com"
+__status__ = "Production"
+
 def is_prime(n):
     '''Returns True if n is prime, False if n is composite.
     is_prime is best used for once-off primality tests,

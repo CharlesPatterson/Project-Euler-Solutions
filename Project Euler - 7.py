@@ -1,4 +1,19 @@
+#!/usr/bin/env python
+"""Solution to Problem 7 of Project Euler.
+
+See http://projecteuler.net/index.php?section=problems&id=7 for the details.
+"""
 from Euler import prime_generator
+
+__author__ = "Charles Patterson"
+__copyright__ = "Copyright 2010"
+__credits__ = []
+
+__license__ = "GPL"
+__version__ = "1.0.0"
+__maintainer__ = "Charles Patterson"
+__email__ = "charles@cmpatterson.com"
+__status__ = "Production"
 
 def project_euler_7():
     '''Prints the 10001st prime.
