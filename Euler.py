@@ -151,3 +151,14 @@ def cross(A, B):
 def proper_divisors(n):
     """Returns a list of the proper divisors of n."""
     return [x for x in range(1, n/2+1) if n % x == 0]
+
+def is_abundant(n):
+    """Returns true if n is an abundant number.
+
+    An abundant number n is one in which d(n) > n.
+    The sum of its divisors is greater than the number itself.
+    One such number is 12: 1+2+3+4+6 = 16 > 12."""
+    if sum(proper_divisors(n)) > n:
+        return True
+    else:
+        return False
