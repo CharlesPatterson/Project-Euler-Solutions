@@ -190,3 +190,11 @@ def mult_order_mod(n, b = 10):
         x = x % n
         count += 1
     return count
+
+def has_repeated_digits(n):
+    """Returns True if n has repeated digits, false if otherwise."""
+    for i in range(len(n)):
+        for j in range(i):
+            if n[i] == n[j] or n[i] == '0' or n[j] == '0':
+                return True
+    return False
