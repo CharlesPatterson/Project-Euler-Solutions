@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=5 for the details.
 """
+import time
 from Euler import lcm
 
 __author__ = "Charles Patterson"
@@ -28,6 +29,9 @@ def project_euler_5():
     print(j)
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_5()
+    end = time.clock()
 
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue...")

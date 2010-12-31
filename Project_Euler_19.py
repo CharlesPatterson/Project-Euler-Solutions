@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=19 for the details.
 """
+import time
 from datetime import datetime
 
 __author__ = "Charles Patterson"
@@ -20,6 +21,9 @@ def project_euler_19():
     print(len([y for y in range(1901,2001) for m in range(1,13) if datetime(y,m,1).weekday() == 6]))
     
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_19()
+    end = time.clock()
 
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue...")

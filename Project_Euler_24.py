@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=1 for the details.
 """
+import time
 from itertools import permutations
 
 __author__ = "Charles Patterson"
@@ -29,6 +30,9 @@ def project_euler_24():
     print(j)
         
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_24()
+    end = time.clock()
 
-    raw_input("Press Enter to continue...")
+    print("Time Taken: %f" % (end-start))
+    raw_input("Press Enter to Continue...")

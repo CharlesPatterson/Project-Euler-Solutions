@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=11 for the details.
 """
+import time
 
 __author__ = "Charles Patterson"
 __copyright__ = "Copyright 2010"
@@ -80,6 +81,9 @@ def matrix_prod(m, x, y, stepH, stepV, n):
     return p
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_11()
- 
+    end = time.clock()
+
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue.")

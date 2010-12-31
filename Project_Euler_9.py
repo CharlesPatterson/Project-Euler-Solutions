@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=9 for the details.
 """
+import time
 
 __author__ = "Charles Patterson"
 __copyright__ = "Copyright 2010"
@@ -27,6 +28,9 @@ def project_euler_9():
                     return
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_9()
+    end = time.clock()
 
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue...")

@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=8 for the details.
 """
+import time
 from Euler import digit_product
 
 __author__ = "Charles Patterson"
@@ -49,6 +50,9 @@ def project_euler_8():
 
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_8()
+    end = time.clock()
 
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue...")

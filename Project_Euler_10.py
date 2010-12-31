@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=10 for the details.
 """
+import time
 from Euler import prime_sieve
 
 __author__ = "Charles Patterson"
@@ -23,6 +24,9 @@ def project_euler_10():
     print(sum(prime_sieve(2*10**6)))
     
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_10()
+    end = time.clock()
 
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue...")

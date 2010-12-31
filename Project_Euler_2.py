@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=2 for the details.
 """
+import time
 
 __author__ = "Charles Patterson"
 __copyright__ = "Copyright 2010"
@@ -14,7 +15,7 @@ __maintainer__ = "Charles Patterson"
 __email__ = "charles@cmpatterson.com"
 __status__ = "Production"
 
-def project_euler_2_iterative():
+def project_euler_2():
     '''Prints the sum of all even-valued fibonacci numbers under 4 million.
     This method uses an iterative approach which is vastly more efficient
     than the naive recursive solution.'''
@@ -27,6 +28,9 @@ def project_euler_2_iterative():
     print(sol)
 
 if __name__ == "__main__":
-    project_euler_2_iterative()
+    start = time.clock()
+    project_euler_2()
+    end = time.clock()
 
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue...")		

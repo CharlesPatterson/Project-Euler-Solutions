@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=3 for the details.
 """
+import time
 from Euler import is_prime
 
 __author__ = "Charles Patterson"
@@ -21,6 +22,9 @@ def project_euler_3():
     print(max(i for i in range(1, int(600851475143**.5) +1) if 600851475143 % i == 0 and is_prime(i)))
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_3()
+    end = time.clock()
 
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue.")

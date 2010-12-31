@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=7 for the details.
 """
+import time
 from Euler import prime_generator
 
 __author__ = "Charles Patterson"
@@ -25,6 +26,9 @@ def project_euler_7():
     print(g.next())
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_7()
-    
-    raw_input("Press Enter to continue...")
+    end = time.clock()
+
+    print("Time Taken: %f" % (end-start))
+    raw_input("Press Enter to Continue...")

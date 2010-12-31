@@ -3,9 +3,9 @@
 
 See http://projecteuler.net/index.php?section=problems&id=12 for the details.
 """
+import time
 from math import sqrt
 from Euler import triangle_number_gen
-import time
 
 __author__ = "Charles Patterson"
 __copyright__ = "Copyright 2010"
@@ -45,5 +45,5 @@ if __name__ == "__main__":
     project_euler_12()
     end = time.clock()
 
-    print("Total Time: %f" % (end-start))
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue...")

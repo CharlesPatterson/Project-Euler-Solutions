@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=20 for the details.
 """
+import time
 from math import factorial
 
 __author__ = "Charles Patterson"
@@ -20,6 +21,9 @@ def project_euler_20():
     print(sum([int(x) for x in str(factorial(100))]))
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_20()
+    end = time.clock()
 
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue...")

@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=21 for the details.
 """
+import time
 from Euler import proper_divisors
 
 __author__ = "Charles Patterson"
@@ -40,6 +41,9 @@ def project_euler_21():
     print(sum(amicables))
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_21()
-    
-    raw_input("Press Enter to continue...")
+    end = time.clock()
+
+    print("Time Taken: %f" % (end-start))
+    raw_input("Press Enter to Continue...")

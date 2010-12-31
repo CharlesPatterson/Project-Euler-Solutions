@@ -3,7 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=17 for the details.
 """
-
+import time
 from Euler import cross
 
 __author__ = "Charles Patterson"
@@ -53,6 +53,9 @@ def project_euler_17():
     print(total)
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_17()
+    end = time.clock()
 
-    raw_input("Press Enter to continue...")
+    print("Time Taken: %f" % (end-start))
+    raw_input("Press Enter to Continue...")

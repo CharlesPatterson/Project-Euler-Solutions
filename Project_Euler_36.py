@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=36 for the details.
 """
+import time
 from Euler import is_palindrome
 
 __author__ = "Charles Patterson"
@@ -21,6 +22,9 @@ def project_euler_36():
     print(sum([n for n in range(1, 1000000) if is_palindrome(str(n)) and is_palindrome(bin(n)[2:])]))
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_36()
+    end = time.clock()
 
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue...")

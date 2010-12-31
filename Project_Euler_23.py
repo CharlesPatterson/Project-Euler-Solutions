@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=23 for the details.
 """
+import time
 from Euler import is_abundant
 
 __author__ = "Charles Patterson"
@@ -30,6 +31,9 @@ def project_euler_23():
     print(sum([x for x in range(limit) if x not in abundant_sums]))
    
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_23()
-    
-    raw_input("Press Enter to continue...")
+    end = time.clock()
+
+    print("Time Taken: %f" % (end-start))
+    raw_input("Press Enter to Continue...")

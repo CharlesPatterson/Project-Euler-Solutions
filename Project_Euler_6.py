@@ -3,6 +3,7 @@
 
 See http://projecteuler.net/index.php?section=problems&id=6 for the details.
 """
+import time
 from Euler import sum_of_squares, triangle_number
 
 __author__ = "Charles Patterson"
@@ -22,6 +23,9 @@ def project_euler_6():
     print(sum_of_squares(100) - triangle_number(100)**2)
 
 if __name__ == "__main__":
+    start = time.clock()
     project_euler_6()
+    end = time.clock()
 
+    print("Time Taken: %f" % (end-start))
     raw_input("Press Enter to Continue...")
