@@ -12,10 +12,10 @@ __email__ = "charles@cmpatterson.com"
 __status__ = "Production"
 
 def is_prime(n):
-    '''Returns True if n is prime, False if n is composite.
+    """Returns True if n is prime, False if n is composite.
     is_prime is best used for once-off primality tests,
     and the expected input is a positive integer.
-    In other cases, a sieving method may work better.'''
+    In other cases, a sieving method may work better."""
 
     # Working from left to right, eliminate negatives and 1
     if n < 2: return False
@@ -42,9 +42,9 @@ def is_prime(n):
     return True
 
 def prime_sieve(limit):
-    '''Returns the set of primes up to the limit.
+    """Returns the set of primes up to the limit.
     This method uses the sieve of Eratosthenes.
-    See http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes.'''
+    See http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes."""
 
     # Start our sieve with 2
     primes = set([2])
@@ -68,7 +68,7 @@ def prime_sieve(limit):
     return primes
 
 def prime_generator():
-    '''Returns the primes in succession.'''
+    """Returns the primes in succession."""
 
     # Take care of the first few primes.
     yield 2
@@ -84,10 +84,10 @@ def prime_generator():
       i += 6
 
 def is_palindrome(n):
-    '''Returns True if n is a palindrome, False if n is not.
+    """Returns True if n is a palindrome, False if n is not.
     This method uses string indexing to compare elements.
     Both strings and integers are acceptable inputs,
-    as integers are just converted to strings for processing.'''
+    as integers are just converted to strings for processing."""
 
     # Convert ints to strs
     if type(n) == int: n = str(n)
@@ -99,58 +99,76 @@ def is_palindrome(n):
     return True
 
 def gcd(a, b):
-    '''Returns the Greatest Common Divisor of a and b.
-    This method uses an iterative version of Euclid's algorithm.'''
+    """Returns the Greatest Common Divisor of a and b.
+    This method uses an iterative version of Euclid's algorithm."""
     while b != 0: a, b = b, a % b
     return a
 
 def lcm(a, b):
-    '''Returns the Least Common Divisor of a and b.
+    """Returns the Least Common Divisor of a and b.
     The expression returned is a convenient theorem I learned
-    from Gallian's Contemporary Abstract Algebra textbook.'''
+    from Gallian's Contemporary Abstract Algebra textbook."""
     return a * b / gcd(a, b)
 
 def sum_of_squares(n):
-    '''Returns the sum of the squares from 1 to n.
-    Done in O(1) time with the explicit formula below.'''
+    """Returns the sum of the squares from 1 to n.
+    Done in O(1) time with the explicit formula below."""
     return (n * (n+1) * (2*n+1)) / 6
 
 def triangle_number(n):
-    '''Returns the nth triangle number.
-    Also the sum of the first n natural numbers.'''
+    """Returns the nth triangle number.
+    Also the sum of the first n natural numbers."""
     return n * (n+1) / 2
 
+def triangle_number_gen():
+    """Generator for the triangle numbers."""
+    c = 1
+    while True:
+        yield triangle_number(c)    
+        c += 1
+
 def digit_sum(n):
-    '''Returns the digit sum of n.
+    """Returns the digit sum of n.
     This method works on both integers and strings,
-    as we convert integers to strings.'''
+    as we convert integers to strings."""
     
     if type(n) == int: n = str(n)
     return sum(int(x) for x in n)
 
 def digit_product(n):
-    '''Returns the digit product of n.
+    """Returns the digit product of n.
     This method works on both integers and strings,
-    as we convert integers to iterable strings.'''
+    as we convert integers to iterable strings."""
 
     if type(n) == int: n = str(n)
     return product(n)
     
 def product(iterable):
-    '''Returns the product of all the elements in iterable.
+    """Returns the product of all the elements in iterable.
     Guido apparently vetoed the inclusion of a product method
-    like the sum method. How irritating, though easy to fix.'''
+    like the sum method. How irritating, though easy to fix."""
     p = 1
     for e in iterable: p *= int(e)
     return p
 
 def cross(A, B):
-    '''Returns the cross product of A with B.'''
+    """Returns the cross product of A with B."""
     return [a+b for a in A for b in B]
 
 def proper_divisors(n):
     """Returns a list of the proper divisors of n."""
-    return [x for x in range(1, n/2+1) if n % x == 0]
+    pd = []
+    i = 1
+
+    while i < n/2+1:
+        if n % i == 0:
+            pd.append(i)
+
+    return pd
+
+def divisors(n):
+    """Returns all the divisors of n."""
+    return proper_divisors(n) + n
 
 def is_abundant(n):
     """Returns true if n is an abundant number.
