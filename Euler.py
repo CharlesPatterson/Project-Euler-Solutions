@@ -180,3 +180,13 @@ def is_abundant(n):
         return True
     else:
         return False
+
+def mult_order_mod(n, b = 10):
+    """Calculates the multiplicative order of b mod n."""
+    count = 0
+    x = b
+    while x != 1:
+        x *= b
+        x = x % n
+        count += 1
+    return count
