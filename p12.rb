@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+
+=begin
+Finds the value of the first triangle number to have over five hundred divisor.
+
+A triangle number is the sum of the first n natural numbers.
+=end
+
+def triangle_numbers
+  Enumerator.new do |enum|
+    sum = 0
+    i=1
+    loop do
+      enum.yield sum
+      sum += i
+      i += 1
+    end
+  end
+end
+
+def pare_divisor(n, d)
+  while n % d == 0
+    n /= d  
+  end
+  n
+end
+
+def is_divisor(n, d)
+  n % d == 0
+end
+
+def divisors(n)
+  n = n.abs
+  total = 2
+  (2..n/2).each do |d|
+    if is_divisor(n, d) then
+      total += 1
+    end
+  end
+  total
+end
+
+def p12
+  e = triangle_numbers
+  c = e.next
+  c_divisors = divisors(c)
+  while c_divisors < 500
+    c = e.next
+    c_divisors = divisors(c)
+  end
+  puts "#{c}: #{c_divisors}"
+end
